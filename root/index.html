@@ -1,0 +1,147 @@
+<html>
+<head>
+
+  <title>SkateFlow</title>
+
+</head>
+
+<style>
+body{
+  margin: 0;
+  padding: 0;
+}
+#back_cover{
+  z-index: -100;
+}
+#wrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  color: grey;
+  text-align: center;
+}
+h1{
+  font-family:cursive;
+  color: grey;
+}
+#header{
+  width: 100%;
+  background-color: grey;
+  z-index: 999;
+  position: absolute;
+  padding: 5px 5px;
+}
+#head_cover {
+  margin: auto auto;
+  /*background-color: darkgrey;*/
+  width: 70%;
+  height:50px;
+
+}
+#logo_cont{
+  height: 100%;
+  width: 70px;
+  float: left;
+  background-color: darkgrey;
+}
+#hold{
+  width: 70%;
+  padding: 7px 5px;
+  float: right;
+}
+#menu_cont{
+  height: 50%;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*background-color: red;*/
+}
+#menu_cont label{
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+#menu_cont label:hover{
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slide {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  border-color: red 1px dashed;
+  position: absolute;
+  z-index: 10;
+  background-size: cover;
+  background-image: url('images/341H');
+}
+
+#slide-one {background-image: url('images/341H');}
+#slide-two {background-image: url('images/194H');}
+#slide-three {background-image: url('images/deck');}
+#slide-four {background-image: url('images/shoes');}
+#slide-five {background-image: url('images/wheels');}
+[class^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+}
+</style>
+
+<body>
+  <!--<div id="overlay"></div>-->
+  <div id="header">
+    <div id="head_cover">
+      <div id="logo_cont"></div>
+      <div id="hold">
+        <div id="menu_cont">
+          <label for="slide-1-trigger"> Slide one</label>
+          <label for="slide-2-trigger"> Slide two</label>
+          <label for="slide-3-trigger"> Slide three</label>
+          <label for="slide-4-trigger"> Slide four</label>
+          <label for="slide-5-trigger"> Slide five</label>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="back_cover">
+    <div id="wrap">
+      <input id="slide-1-trigger" type="radio" name="slides" checked>
+        <div class="slide" id="slide-one">
+          <h1>Headline One</h1>
+        </div>
+      <input id="slide-2-trigger" type="radio" name="slides">
+      <div class="slide" id="slide-two">
+        <h1>Headline Two</h1>
+      </div>
+      <input id="slide-3-trigger" type="radio" name="slides">
+      <div class="slide" id="slide-three">
+        <h1>Headline Three</h1>
+      </div>
+      <input id="slide-4-trigger" type="radio" name="slides">
+      <div class="slide" id="slide-four">
+        <h1>Headline Four</h1>
+      </div>
+      <input id="slide-5-trigger" type="radio" name="slides">
+      <div class="slide" id="slide-five">
+        <h1>Headline Five</h1>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

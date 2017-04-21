@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: grey;
+  color: white;
+  text-align: center;
+}
+header {
+  background: white;
+  box-shadow: 0 .5em len #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+}
